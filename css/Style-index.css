@@ -17,11 +17,9 @@
     background-position: center;
     background-color: #010101;
     position: absolute;
-    position: fixed;
     z-index: 9999;
-    
-    
-   
+    border-bottom: #FF9A0080 solid 1px;
+
 }
 
 nav{
@@ -31,20 +29,24 @@ nav{
     padding-top: 15px;
     padding-left: 10%;
     padding-right: 10%;
-    
-
-
 }
 
 .logo{
     color: #FF9A00;
     font-size: 28px;
+    user-select: none;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+    transition: .5s;
 }
 
 nav ul li{
     list-style-type: none;
     display: inline-block;
-    padding: 10px 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     
 }
 
@@ -52,15 +54,16 @@ nav ul li a{
     color: white;
     text-decoration: none;
     font-weight: bold;
-    
-    
 }
 
 nav ul li a:hover{
     color: #FF9A00;
-    transition: .3s;
-
+    text-decoration: underline;
+    transition: .5s;
 }
+
+
+
 
 button{
     border: none;
@@ -70,32 +73,31 @@ button{
     color: white;
     font-weight: bold;
     font-size: 14px;
-    transition: .4s;
 }
 
 button:hover{
-    cursor: pointer;
     transform: scale(1.1);
+    transition: .5s;
+    background-color: #FF9A0080;   
 }
 
 main{
-   
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-image: url(../img/photo.jpg);
+    background-color: #010101;
     background-size: cover;
     background-position: center;
     height: 100vh;
 }
 
 main p{
-    color: #FF9A00;
-    font-size: 40px;
-    font-weight: bold;
-    padding-left: 10%;
-    transition: .8s;
     
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
+    color: #ffffff;
+    padding-left: 10%;   
 }
 
 main img{
@@ -134,20 +136,21 @@ main div:hover{
 
 }
 
-section{
-    width: 100%;
-    height: 100vh;
-    background-color: black;
+#scroll{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    
 
 }
 
 h1{
     color: #FF9A00;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: lighter;
+    font-weight: 800;
     font-size: 150px;
 }
 
@@ -164,8 +167,8 @@ p{
 }
 
 .about-par{
-    padding-left: 190px;
-    padding-right: 80px;
+    padding-left: 10%;
+    padding-right: 130px;
     padding-bottom: 50px;
     border-top: solid 2px #FF9A00;
     border-bottom: solid 2px #FF9A00;
@@ -175,4 +178,85 @@ p{
 
 }
 
+/* ====== 3dt section in page ====== */
+
+.work{
+    width: 100%;
+    height: 100vh;
+    padding-left: 190px;
+    padding-left: 10%;
+    background-color: #010101;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+.workpara{
+
+   /* hhhhhh  */
+    
+}
+
+
+.containers{
+    padding-left: 10%;
+    padding-right: 10%;
+    /* align-items: center; */
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    /* grid-template-rows: 200px 200px; */
+    column-gap: 5%;
+    row-gap: 8%;
+}
+
+
+.containers div p{
+    font-size: 15px;
+    font-weight: 400;
+    padding-top: 15px;
+    line-height: 1.5;
+}
+
+
+.containers div img{
+    width: 65px;
+    height: auto;
+}
+
+.containers div img:hover{
+    transform: rotate(360deg);
+    transition: .7s;
+}
+
+.adobeAI{
+    border: #FF9A00 solid 2px;
+    border-radius: 10px;
+    background-color: #330000;
+    padding: 30px;
+
+}
+.adobeXD{
+    border: #ff61f6 solid 2px;
+    border-radius: 10px;
+    background-color: #470137;
+    padding: 30px;
+
+}
+.adobePS{
+    border: #31a8ff solid 2px;
+    border-radius: 10px;
+    background-color: #001e36;
+    padding: 30px;
+
+}
+.adobeAE{
+    border: #7300ff solid 2px;
+    border-radius: 10px;
+    background-color: #360474;
+    padding: 30px;
+
+}
 
