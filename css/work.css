@@ -1,0 +1,229 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+::selection{
+    background: #FF9A0050;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+body{
+    background-color: #0b1d2a;
+    width: 100%;
+}
+
+header{
+    padding: 18px 0px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 9999;
+    /* border-bottom: #2994D180 solid 1px; */
+    /* background-color: #fcfcfc30; */
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+.logo img{
+    /* color: white;
+    padding: 10px 25px;
+    border-top: 2px solid #2994D1;
+    border-top-right-radius: 20px;
+    border-bottom: 2px solid #2994D1;
+    border-bottom-left-radius: 20px;
+    font-size: 15px;
+    font-weight: bolder;
+    user-select: none; */
+
+    width: 100px;
+    border: solid 1.5px #2994D1;
+}
+
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding-left: 30px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 17px;
+   
+}
+
+nav ul li a:hover{
+    color: #2994D1;
+    transition: .5s;
+}
+
+.button{
+    padding: 10px 25px;
+    background-color: transparent;
+    border: solid 2px #2994D1;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.button a{
+text-decoration: none;
+color: white;
+
+}
+
+.button:hover{
+    cursor: pointer;
+    transition: .5s;
+    color: white;
+    background-color: #FF9A00;
+    border: solid 2px #ff9A00; 
+}
+
+
+main{
+    width: 100%;
+    height: 100vh;
+}
+
+
+.section0{
+       padding-top: 9%;
+}
+
+
+.s1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 3%;
+}
+
+h1{ 
+    color: #FF9A00;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 800;
+    font-size: 140px;
+}
+
+.para{
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 450;
+    color: white;
+    padding-right: 10%;
+}
+
+.text{
+
+    color: #ffffff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 70px;
+    font-weight: 350;
+    border: #ffffff solid 2px;
+    padding: 90px 35px;
+    background-color: #ffffff20;
+    
+}
+
+.s2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    column-gap: 3.5%;
+}
+
+.s2 img{
+    width: 45px;
+    position: relative;
+    bottom: 20px;
+    right: 5px;
+
+}
+
+.s2 p{
+    color: white;
+    
+}
+
+.adobeAI{
+    border: #FF9A00 solid 2px;
+    background-color: #330000;
+    padding: 40px 35px;
+}
+.adobeXD{
+    border: #ff61f6 solid 2px;
+    background-color: #470137;
+    padding: 40px 35px;
+
+}
+.adobePS{
+    border: #31a8ff solid 2px;
+    background-color: #001e36;
+    padding: 40px 35px;
+
+}
+.adobeAE{
+    border: #CB96FF solid 2px;
+    background-color: #2D255E;
+    padding: 40px 35px;
+}
+
+.s2 img:hover{
+        transform: rotate(360deg);
+        transition: .7s;
+}
+
+
+footer{
+    background-color: #fcfcfc30;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+}
+
+.linksmedias img{
+
+        width: 25px;
+}
+
+.linksmedias a{
+
+padding-left: 25px;
+
+}
+
+.linksmedias img:hover{
+    transform: scale(1.2);
+    transition: 0.5s; 
+}
+
+h5{
+    color: #ffffff;
+}
