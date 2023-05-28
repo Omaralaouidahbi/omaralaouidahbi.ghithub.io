@@ -21,6 +21,7 @@
 html{
     font-family: 'Nunito', sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 h1, h2, h3, h4, h5, h6{ 
@@ -39,23 +40,42 @@ span{
     color: var(--primaryColor);
 }
 
-.btt{
+.bttdown{
     background-color: var(--primaryColor);
     color: var(--bgColor);
     text-decoration: none;
     font-weight: bold;
     padding: 0.81rem 1.87rem;
-    border: transparent 2px solid;
+    border: var(--primaryColor) 2px solid;
     border-radius: 30px;
     transition: 0.4s;
 
 }
-
-.btt:hover{
+.bttdown:hover{
     background-color: transparent;
     border: var(--primaryColor) 2px solid;
     color: var(--primaryColor);
 }
+
+.btttalk{
+    background-color: transparent;
+    color: var(--primaryColor);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.81rem 1.87rem;
+    margin-left: 1.3rem;
+    border: var(--primaryColor) 2px solid;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.btttalk:hover{
+    background-color: var(--primaryColor);
+    border: var(--primaryColor) 2px solid;
+    color: var(--bgColor);
+}
+
+
 
 /* ==============================Home=============================== */
 
@@ -76,9 +96,14 @@ span{
     padding-top: 1.3rem;
     padding-left: var(--padding);
     padding-right: var(--padding);
+    padding-bottom: 1.3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    background-color: var(--bgColor);
 }
 
 
@@ -100,6 +125,19 @@ span{
 
 .home nav ul li a:hover{
     color: var(--primaryColor);
+}
+
+.home .lang{
+text-align: right;
+}
+
+
+.bttlang img{
+    width: 25%;
+    margin: 0 0.3rem;
+    border: var(--lightColor) solid 1.8px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 5px var(--primaryColor);
 }
 
 
@@ -185,7 +223,7 @@ span{
 
 .services{
     background-color: var(--bgColor);
-    padding: 3rem 3rem 
+    padding: 4rem 3rem 
 }
 .services .text-center{
     font-size: 3.37rem;
@@ -249,29 +287,34 @@ span{
 
 .skills .container-images{
     width: 35%;
-    margin: 3.5rem 0;
 }
 
 .skills .container-images img{
-    width: 100%;
+    margin-top: 4rem;
+    width: 95%;
 }
+
+.skills h1{
+    font-size: 3.37rem;
+    margin-top: 1rem;
+ }
 
 .skills .container-skills{
     width: 50%;
 }
 
 .skills .content-skills{
+    margin-top: 4rem;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 4rem;
-    margin: 2.5rem 0;
 }
 
 .skills .container-skills .content-skills .skill{
-    width: 100px;
-    height: 100%;
+    width: 90px;
+    height: 90px;
     background-color: var(--lightColor);
-    border-radius: 5%;
+    border-radius: 50%;
+    border: solid 0.2rem var(--primaryColor);
     margin: 0 2rem 3rem 0;
     display: flex;
     align-items: center;
@@ -279,11 +322,146 @@ span{
 }
 
 .skills .container-skills .content-skills .skill img{
-    width: 70%;
-    
-   
+    width: 60%; 
 }
 
-.skills h1{
+
+/* ==============================Work=============================== */
+
+.work{
+    background-color: var(--bgColor);
+    padding: 4rem 3rem;
+}
+
+.work .text-center{
     font-size: 3.37rem;
- }
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.work .containercard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+}
+
+.containercard .card{
+    border: solid 2px var(--primaryColor);
+    position: relative;
+    height:200px;
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.containercard .card:hover{
+    cursor: pointer;
+}
+
+.containercard .card img{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+
+.containercard .card:hover img{
+    transform: scale(1.1) rotate(-5deg);
+}
+
+.descriptions{
+    width:300px;
+    height:70px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0px;
+    background: linear-gradient(to top, var(--primaryColor) 40% , rgb(255, 255, 255, 0));
+    transition: 0.5s;
+
+}
+
+.containercard .card:hover .descriptions{
+    height: 200px;
+    bottom: 0px;
+    background: linear-gradient(to top, var(--primaryColor), rgb(255, 255, 255));
+    opacity: 70%;
+}
+
+
+.descriptions h1{
+    margin: 10px;
+    color: var(--bgColor);
+    font-weight: 900;
+}
+
+.descriptions p{
+    padding: 10px;
+    color: var(--blackColor);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card:hover p{
+    opacity: 100%;
+    visibility: visible;
+}
+
+
+/* ==============================Footer=============================== */
+
+
+footer{
+    position: relative;
+    background-color: var(--seconderyColor);
+    padding: 3rem var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer .social .fa-brands{
+    color: var(--lightColor);
+    font-size: 2.5rem;
+    margin: 1.5rem 1rem 1rem 1rem;
+}
+
+footer .social .fa-brands:hover{
+    color: var(--primaryColor);
+    transition: 0.5s;
+}
+
+
+hr{
+    background-color: var(--primaryColor);
+    width: 100%;
+    height: 1px;
+    border: transparent;
+    text-align: center;
+}
+
+footer p{
+    font-size: 0.9rem;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.back{
+    position: absolute;
+    right: 3%;
+    bottom: 30%;
+    border: solid 2px var(--primaryColor);
+    padding: 10px;
+    border-radius: 50%;
+
+}
+
+footer .back .fa-solid{
+    color: var(--primaryColor);
+}
