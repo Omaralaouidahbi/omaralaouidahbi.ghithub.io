@@ -137,7 +137,6 @@ text-align: right;
     margin: 0 0.3rem;
     border: var(--lightColor) solid 1.8px;
     border-radius: 50%;
-    box-shadow: 0px 1px 5px var(--primaryColor);
 }
 
 
@@ -409,13 +408,70 @@ text-align: right;
     visibility: visible;
 }
 
+/* ==============================contact=============================== */
+
+
+.contact{
+    background-color: var(--seconderyColor);
+    padding: 10rem 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.contact .phone{
+    text-align: center;
+}
+
+
+.contact .local{
+    text-align: center;
+}
+
+
+.contact .mail{
+    text-align: center;
+}
+
+.contact p{
+    font-weight: 500;
+    transition: 0.4s;
+    
+}
+
+.contact p:hover{
+    color: var(--primaryColor);
+    text-decoration: underline;
+}
+
+.contact a{
+    text-decoration: none;
+    color: var(--lightColor);
+}
+
+.contact .fa-regular{
+    color: var(--primaryColor);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.contact .fa-solid{
+    color: var(--primaryColor);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+
+  
+
 
 /* ==============================Footer=============================== */
 
 
 footer{
     position: relative;
-    background-color: var(--seconderyColor);
+    background-color: var(--bgColor);
     padding: 3rem var(--padding);
     display: flex;
     align-items: center;
@@ -452,16 +508,27 @@ footer p{
     padding: 1rem 0 0.5rem 0;
 }
 
-.back{
-    position: absolute;
-    right: 3%;
-    bottom: 30%;
+.back{    
     border: solid 2px var(--primaryColor);
-    padding: 10px;
+    padding: 9px 12px;
     border-radius: 50%;
 
 }
 
+footer .top{
+    position: absolute;
+    right: 3%;
+    bottom: 35%;
+}
+
+
 footer .back .fa-solid{
+    color: var(--lightColor);
+}
+
+footer .back .fa-solid:hover{
     color: var(--primaryColor);
 }
+
+
+
