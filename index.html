@@ -26,7 +26,7 @@
   <section class="home">
     <nav>
       <h1>Omar<span> ALAOUI DAHBI</span></h1>
-      <ul>
+      <ul id="actions">
         <li><a href="#home">Accueil</a></li>
         <li><a href="#about">À propos</a></li>
         <li><a href="#services">Services</a></li>
@@ -38,14 +38,18 @@
         <a href="index.html"class="bttlang"><img src="icons/langues/fr.png" alt="Fr"></a>
         <a href="index-en.html"class="bttlang"><img src="icons/langues/en.png" alt="En"></a>
       </div>
+      <button id="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
   
     <div class="content">
       <div class="container-texts">
         <h1>Bonjour, Je m'appelle </h1>
-        <h2>Omar <span>AOAUI DAHBI</span>,<br> je suis designer graphique &amp; développeur frontend.</h2>
+        <h2>Omar <span>ALAOUI DAHBI</span>,<br> je suis designer graphique <span>&amp;</span> développeur frontend.</h2>
         <a href="https://drive.google.com/u/0/uc?id=1jQ1NaHBT97y9pdUn4apcdge_1fnTUW4A&export=download" target="_blank" class="bttdown">Télécharger CV</a>
-        
         <a href="https://t.me/omaralaouidahbi" target="_blank" class="btttalk">Discutons <i class="fa-regular fa-paper-plane"></i></a>
       </div>
   
@@ -81,7 +85,7 @@
     </div>
   
     <div class="container-images">
-      <img src="imgs/bg1.png" alt="">
+      <img src="imgs/bg1.png" alt="bg1" class="bg1">
     </div>
     
   </section>
@@ -95,7 +99,7 @@
 
 <div id="services">
   <section class="services">
-    <h1 class="text-center">Mes <span>services</span></h1>
+    <h1 class="text-center">Mes <span>Services</span></h1>
     <div class="box">
       <div class="card">
         <i class="fa-solid fa-bezier-curve"></i>
@@ -104,7 +108,7 @@
         <p>Identité visuelle.</p>
         <p>Design de supports imprimés.</p>
         <p>Conception d'interfaces UI-UX.</p>
-        <p>Illustrations et infographies personnalisées.</p>
+        <p>Illustrations infographies personnalisées.</p>
         </div>
       </div>
   
@@ -138,7 +142,7 @@
         <div class="par">
         <p>Mises à jour régulières du site web.</p>
         <p>Suivi des performances du site.</p>
-        <p>Support 24h/24h 7j par semaine.</p>
+        <p>Support 24h/7.</p>
         <p>Résolution de problèmes techniques et correction de bugs.</p>
         </div>
       </div>
@@ -161,13 +165,14 @@
   
     <div class="container-skills">
       <h1>Mes <span>Compétences</span></h1>
+      <h1 class="breakline">Mes<br><span>Compétences</span></h1>
       <div class="content-skills">
         <div class="skill"> <img src="icons/ai.png" alt="Ai"></div>
         <div class="skill"> <img src="icons/ps.png" alt="Ps"></div>
         <div class="skill"> <img src="icons/id.png" alt="Id"></div>
         <div class="skill"> <img src="icons/dn.png" alt="Dn"></div>
         <div class="skill"> <img src="icons/ae.png" alt="Ae"></div>
-        <div class="skill"> <img style="border-radius: 15px; width: 52px;" src="icons/dc.png" alt="Dc"></div>
+        <div class="skill"> <img style="border-radius: 10px; width: 43px;" src="icons/dc.png" alt="Dc"></div>
         <div class="skill"> <img src="icons/xd.png" alt="Xd"></div>
         <div class="skill"> <img src="icons/cam.png" alt="cam"></div>
         <div class="skill"> <img src="icons/html.png" alt="HTML"></div>
@@ -189,10 +194,10 @@
 <div id="work">
   <section class="work">
     <h1 class="text-center">Mes <span>Projets</span></h1>
-    <div class="containercard">
+    <div class="containercard1">
       <a href="https://www.behance.net/omaralaouidahbi" target="_blank">
         <div class="card">
-        <img src="/imgs/deserts.jpg" alt="Deserts">
+        <img src="/imgs/Deserts.jpg" alt="Deserts">
         <div class="descriptions">
           <h1>DÉSERT &RightArrow; <span style="font-weight: 500; color: #2A0944">Photoshop</span></h1>
           <P>Édition, retouche d'images &amp; design graphique.</P>
@@ -233,7 +238,7 @@
       
     </div>
   
-    <div class="containercard">
+    <div class="containercard2">
   
       <a href="https://www.behance.net/gallery/121080349/MERGER-DESIGN" target="_blank">
         <div class="card">
@@ -284,6 +289,8 @@
 
 
   <!-- =======Section - About ================================================= -->
+
+
 <div id="contact">
   <section class="contact">
 
@@ -309,6 +316,8 @@
     </div>
  
 </div>
+
+
   <!-- =======Section - Footer ================================================= -->
 
 
@@ -337,8 +346,10 @@
     <div class="back"><i class="fa-solid fa-angles-up"></i></div>
    </a>
  </div>
+ <div class="mobile"></div>
 </footer>
 
+<script src="/js/script.js"></script>
 </body>
 </html>
 

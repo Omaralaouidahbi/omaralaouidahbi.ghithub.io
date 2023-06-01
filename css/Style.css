@@ -24,6 +24,11 @@ html{
     scroll-behavior: smooth;
 }
 
+::selection {
+    background-color: var(--primaryColor); 
+    color: var(--blackColor); 
+  }
+
 h1, h2, h3, h4, h5, h6{ 
     color: var(--lightColor);
 }
@@ -146,7 +151,6 @@ text-align: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 
 
@@ -165,7 +169,7 @@ text-align: right;
     text-align: right;
     align-self: flex-end;
     position: relative;
-    width: 35%;
+    width: 45%;
     height: 100%;
     
 }
@@ -194,7 +198,7 @@ text-align: right;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem var(--padding);
+    padding: 6.5rem var(--padding);
 
 }
 
@@ -210,19 +214,25 @@ text-align: right;
 
 .about .container-images{
      width: 35%;
+     display: flex;
+     justify-content: center;
 }
 
 .about .container-images img{
-    width: 80%;
-    margin-top: 6.5rem;
-
+    width: 60%;
+    transition: 0.4s;
 }
+
+.about .container-images .bg1:hover{
+    transform: translateY(-50px);
+}
+
 
 /* ==============================Services=============================== */
 
 .services{
     background-color: var(--bgColor);
-    padding: 4rem 3rem 
+    padding: 3.5rem 3rem 6.5rem 3rem;
 }
 .services .text-center{
     font-size: 3.37rem;
@@ -232,7 +242,6 @@ text-align: right;
 
 .services .box{
     display: flex;
-    /* justify-content: space-between;     */
     column-gap: 15px;
     justify-content: center;
     margin-top: 2rem;
@@ -278,20 +287,27 @@ text-align: right;
 
 .skills{
     background-color: var(--seconderyColor);
-    padding: 2rem var(--padding);
+    padding: 6.5rem var(--padding);
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .skills .container-images{
+    display: flex;
+    justify-content: center;
     width: 35%;
 }
 
 .skills .container-images img{
-    margin-top: 4rem;
-    width: 95%;
+    width: 85%;
+    transition: 0.4s;
 }
+
+.skills .container-images img:hover{
+    transform: rotate(-68deg);
+}
+
 
 .skills h1{
     font-size: 3.37rem;
@@ -322,6 +338,14 @@ text-align: right;
 
 .skills .container-skills .content-skills .skill img{
     width: 60%; 
+    transition: .7s;
+}
+
+
+.skills .container-skills .content-skills .skill img:hover{
+    transform: rotate(360deg);
+    
+    
 }
 
 
@@ -329,7 +353,7 @@ text-align: right;
 
 .work{
     background-color: var(--bgColor);
-    padding: 4rem 3rem;
+    padding: 3.5rem 3rem 6.5rem 3rem;
 }
 
 .work .text-center{
@@ -338,15 +362,29 @@ text-align: right;
     text-align: center;
 }
 
-.work .containercard{
+.work .containercard1{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
-
+}
+.work .containercard2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
 }
 
-.containercard .card{
+.containercard1 .card{
+    border: solid 2px var(--primaryColor);
+    position: relative;
+    height:200px;
+    width: 300px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.containercard2 .card{
     border: solid 2px var(--primaryColor);
     position: relative;
     height:200px;
@@ -356,18 +394,30 @@ text-align: right;
     border-radius: 5px;
 }
 
-.containercard .card:hover{
+.containercard1 .card:hover{
+    cursor: pointer;
+}
+.containercard2 .card:hover{
     cursor: pointer;
 }
 
-.containercard .card img{
+.containercard1 .card img{
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    transition: 0.5s;
+}
+.containercard2 .card img{
     width: 100%;
     height: auto;
     border-radius: 3px;
     transition: 0.5s;
 }
 
-.containercard .card:hover img{
+.containercard1 .card:hover img{
+    transform: scale(1.1) rotate(-5deg);
+}
+.containercard2 .card:hover img{
     transform: scale(1.1) rotate(-5deg);
 }
 
@@ -385,7 +435,7 @@ text-align: right;
 .containercard .card:hover .descriptions{
     height: 200px;
     bottom: 0px;
-    background: linear-gradient(to top, var(--primaryColor), rgb(255, 255, 255));
+    background: linear-gradient(to top, var(--primaryColor), var(--lightColor));
     opacity: 70%;
 }
 
@@ -413,7 +463,7 @@ text-align: right;
 
 .contact{
     background-color: var(--seconderyColor);
-    padding: 10rem 10rem;
+    padding: 10rem var(--padding);
     display: flex;
     justify-content: space-between;
     align-items: center;   
@@ -434,9 +484,8 @@ text-align: right;
 }
 
 .contact p{
-    font-weight: 500;
+    font-size: 0.9rem;
     transition: 0.4s;
-    
 }
 
 .contact p:hover{
@@ -531,4 +580,332 @@ footer .back .fa-solid:hover{
 }
 
 
+footer .mobile{
+    display: none;
+}
 
+.breakline{
+    display: none;
+}
+
+
+/* ============================= Humerger Menu =============================== */
+
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+#menu span{
+    display: block;
+    width: 33px;
+    height: 4px;
+    background-color: var(--lightColor);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 5px;
+}
+
+
+#menu.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+#menu.is-active span{
+    background-color: var(--primaryColor);
+}
+
+
+/* ============================= Media Queries =============================== */
+
+
+/* ============================= Home =============================== */
+
+
+@media screen and (max-width: 575px) {
+
+    /* ============================= Home =============================== */
+
+
+   :root{
+    --padding: 1.5rem;
+   } 
+   html{
+    font-size: 13px;
+   }
+
+
+     .home{
+        text-align: center;
+     }
+    
+
+   .home .container-images .p1{
+    display: none;
+    /* position: absolute;
+    top: -85%;
+    height: 25%;
+    left: 110%; */
+   }
+
+   nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 82px;
+    background-color: var(--seconderyColor);
+    border-bottom: 1px solid var(--primaryColor);
+   }
+
+   nav .lang{
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 60px;
+   }
+
+   nav ul{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--seconderyColor);
+    z-index: 3;
+   }
+
+   nav ul.is-active{
+    display: block;
+
+   }
+
+
+  .home nav ul li{
+    display: block;
+    text-align: center;
+    margin: 35px ;
+   }
+
+   .home nav ul li a{
+    font-size: 1.5rem;
+   }
+
+
+   #menu{
+    display: block;
+    z-index: 4;
+   }
+
+   .home .content {
+    display: block;
+   }
+ 
+    .home .content {
+        position: relative;
+    flex-grow: 1;
+    padding: 7rem 3rem;
+    height: 100vh;
+    }
+
+   .home .content h2 {
+    font-size: 2.5rem;
+    margin: 1rem 0rem 5rem 0rem;
+   }
+
+   .home .content h1{
+    font-size: 2.5rem;
+    margin-top: 5rem;
+   }
+
+    /* ============================= About =============================== */
+
+
+    .about {
+        display: block;
+        padding: 6.5rem var(--padding) 3rem var(--padding);
+    }
+
+    .about .container-text{
+        width: 100%;
+    }
+    
+    .about .container-text h1{
+        text-align: center;
+        margin-top: -2.5rem;
+    }
+
+    .about .container-text p{
+        text-align: center;
+        margin-bottom: 3.5rem 0;
+    }
+
+    .about .container-images{
+        display: none;
+    }
+
+    /* ============================= services =============================== */
+
+    .services{ 
+        display: block;
+        
+    }
+
+    .services .box{
+        flex-wrap: wrap;
+    }
+
+    .services .box .card{
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+
+
+    .services .box .card h1{
+        font-size: 1.5rem;
+    }
+
+
+    .services .box .card .par p{
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .services .box .card .par p::before{
+        display: none;
+
+    }
+ 
+
+    /* ============================= skills =============================== */
+
+
+    .skills{
+        padding: 3rem var(--padding) 3rem var(--padding);
+    }
+
+    .skills .container-images{
+        display: none;
+    }
+
+    .skills .container-skills{
+        width: 100%;
+        flex-direction: column;
+        
+    }
+
+    .skills h1{
+        display: none;
+    }
+
+    .skills .breakline{
+        display: block;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .skills .container-skills .content-skills{       
+        display: flex;
+        justify-content: center;
+        margin-top: 2.5rem;
+    }
+
+    .skills .container-skills .content-skills .skill{       
+        margin: 2.5% 3%;
+    }
+
+ /* ============================= Work =============================== */
+
+    .work{
+        padding: 3.5rem 3rem 3.5rem 3rem;
+    }
+
+    .work .containercard2{
+    display: none;
+    }
+
+    .containercard1 .descriptions{
+        display: none;
+    }
+
+    .containercard1{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    .containercard1 .card{
+        width: 100%;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    
+/* ============================= contact =============================== */
+    
+
+    .contact {
+        flex-direction: column;
+        padding: 7rem var(--padding);
+    }
+
+    .contact .phone, .local, .mail{
+        margin-bottom: 2.5rem;
+    }
+
+    .contact .phone .fa-regular{
+        font-size: 3rem;
+    }
+
+    .contact .local .fa-solid {
+        font-size: 3rem;
+    }
+
+    .contact .mail .fa-solid {
+        font-size: 3rem;
+    }
+
+    .contact p{
+        font-size: 1.2rem;
+    }
+
+    /* ============================= footer =============================== */
+
+    footer{
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    footer p{
+        text-align: center;
+    }
+
+    footer .social{
+        margin: 1.5rem 0;
+    }
+
+    footer .mobile{
+        display: block;
+        padding: 2.5rem 0;
+    }
+
+    footer .top{
+        bottom: 10%;
+        right: 45%;
+    }
+}
