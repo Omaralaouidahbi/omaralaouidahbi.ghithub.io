@@ -26,7 +26,7 @@ html{
 
 ::selection {
     background-color: var(--primaryColor); 
-    color: var(--blackColor); 
+    color: var(--blackColor);
   }
 
 h1, h2, h3, h4, h5, h6{ 
@@ -432,7 +432,13 @@ text-align: right;
 
 }
 
-.containercard .card:hover .descriptions{
+.containercard1 .card:hover .descriptions{
+    height: 200px;
+    bottom: 0px;
+    background: linear-gradient(to top, var(--primaryColor), var(--lightColor));
+    opacity: 70%;
+}
+.containercard2 .card:hover .descriptions{
     height: 200px;
     bottom: 0px;
     background: linear-gradient(to top, var(--primaryColor), var(--lightColor));
@@ -484,7 +490,7 @@ text-align: right;
 }
 
 .contact p{
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     transition: 0.4s;
 }
 
