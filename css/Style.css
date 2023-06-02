@@ -673,7 +673,7 @@ footer .mobile{
     background-color: var(--seconderyColor);
     border-bottom: 1px solid var(--primaryColor);
    }
-
+    
    nav .lang{
     display: block;
     position: absolute;
@@ -837,11 +837,11 @@ footer .mobile{
     }
 
     .work .containercard2{
-    display: none;
+        display: none;
     }
 
     .containercard1 .descriptions{
-/*         display: none; */
+        display: none;
     }
 
     .containercard1{
