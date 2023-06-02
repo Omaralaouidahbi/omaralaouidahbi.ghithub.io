@@ -719,8 +719,7 @@ footer .mobile{
    }
  
     .home .content {
-        position: relative;
-    flex-grow: 1;
+     flex-grow: 1;
     padding: 7rem 3rem;
     height: 100vh;
     }
