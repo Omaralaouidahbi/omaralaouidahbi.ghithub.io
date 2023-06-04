@@ -647,7 +647,7 @@ footer .mobile{
 /* ============================= Media Queries =============================== */
 
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 576px) {
 
 
 
@@ -685,7 +685,6 @@ footer .mobile{
     width: 100%;
     height: 100vh;
     background-color: var(--seconderyColor);
-    /* z-index: 3; */
    }
 
    .home nav ul li{
@@ -696,7 +695,6 @@ footer .mobile{
 
    #menu{
     display: block;
-    /* z-index: 4; */
    }
 
 
@@ -919,31 +917,548 @@ footer .top{
 
 /* ============================= Phone Retate =============================== */
 
-@media screen and (min-width: 576px) and (max-width: 767px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
 
     
     
+    :root{
+        --padding: 1.5rem;
+       } 
+       html{
+        font-size: 13px;
+       }
+    
+       .home {
+        width: 100%;
+        height: 120vh;
+       }
+    
+       .home nav ul{
+        display: none;
+       }
+    
+       .home nav{
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: var(--bgColor);
+        border-bottom: 1px solid var(--primaryColor);
+       }
+    
+       nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--seconderyColor);
+        z-index: 3;
+       }
+    
+       .home nav ul li{
+        display: block;
+        text-align: center;
+        margin: 35px ;
+       }
+    
+       #menu{
+        display: block;
+        z-index: 4;
+       }
     
     
+       nav ul.is-active{
+        display: block;
+       }
 
+       .home .lang {
+        position: absolute;
+        left: 75%;
+       }
 
+    
+       .home .content{
+        display: block;
+        text-align: center;
+        padding-top: 10%;
+       }
+       .home .container-images{
+        display: none;
+       }
+    
+       .home .container-images1{
+        display: block;
+  
+    }
+    
+       .home .container-images1 .p11{
+        width: 18%;
+    }
+    
+       .home h1{
+        font-size: 2rem;
+       }
+    
+    
+       .home .container-texts h1{
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2%;
+       }
+    
+       .home .container-texts h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 5%;
+       }
 
+    
+    /* ================================================== */
+    
+       .about{
+        padding: 3rem var(--padding);
+        width: 100%;
+        }
+    
+       .about .container-text {
+        width: 100%;
+       }
+    
+       .about .container-text h1 {
+        text-align: center;
 
+        margin-bottom: 3%;
+       }
+    
+       .about .container-text p {
+        text-align: center;
+        font-size: 0.7rem;
+       }
+    
+       .about .container-images{
+        display: none;
+       }
+    
+    
+    
+    /* ================================================== */
+    
+    .services{
+     padding: 3rem var(--padding);
+     width: 100%;
+    }
+    
+    .services .text-center h1 {
+    margin-bottom: 8%;
+    }
+        
+    .services .box{
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 15px;
+    }
+    
+    .services .box .card{
+    width: 45%;
+    /* margin-bottom: 8%; */
+    }
+        
+    .services .box .card h1{
+    font-size: 1.3rem;
+    }
+    
+    .services .box .card p{
+    font-size: 1rem;
+    }
+    
+    
+    /* ================================================== */
+    
+    .skills{
+        padding: 3rem var(--padding);
+        width: 100%;
+        display: block;
+    }
+    
+    
+    .skills .container-images{
+        display: none;
+    }
+    
+    .skills .container-skills h1{
+        display: none;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    .skills h1{
+        margin-top: 0;
+    }
+    
+    .skills .breakline{
+        display: block;
+        text-align: center;
+        margin-bottom: 8%;
+    }
+    
+    
+    .skills .container-skills .content-skills{
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+    }
+    
+    
+    .skills .container-skills{
+        width: 100%;
+    }
+    
+    
+    .skills .container-skills .content-skills .skill{
+        margin: 2.5% 3%;
+    }
+    
+    
+     
+    /* ================================================== */
+    
+    .work{
+        padding: 3rem var(--padding);
+        width: 100%;
+    }
+    
+    .work .containercard2{
+        display: none;
+    }
+    
+    .containercard1{
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 15px;  
+    }
+    
+    
+    .work .containercard1 .descriptions{
+        width: 100%;
+    }
+    
+    .work .containercard1 .descriptions h1{
+        margin-top: 10%;
+    }
+    
+    
+    
+    /* ================================================== */
+    
+    .contact{
+        padding: 3rem 4rem;
+        width: 100%;
+    }
+    
+    .mail, .local, .phone{
+        margin: 10% 0;
+    }
+    
+    
+    /* ================================================== */
+    
+    
+    
+    footer{
+        padding: 3rem var(--padding);
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    footer p{
+        text-align: center;
+    }
+    
+    footer .social{
+        margin: 1.5rem 0;
+    }
+    
+    footer .mobile{
+        display: block;
+        padding: 2.5rem 0;
+    }
+    
+    footer .top{
+        bottom: 8%;
+        right: 48%;
+    }
+    
 }
+
+/* ============================= Phone Retate ======================11111=========  */
+
+@media screen and (min-width: 992px) and (max-width: 1200px){
+
+    :root{
+        --padding: 1.5rem;
+       } 
+       html{
+        font-size: 13px;
+       }
+    
+       .home {
+        width: 100%;
+        height: 60vh;
+       }
+    
+       .home nav ul{
+        display: none;
+       }
+    
+       .home nav{
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background-color: var(--bgColor);
+        border-bottom: 1px solid var(--primaryColor);
+       }
+    
+       nav ul{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--seconderyColor);
+        z-index: 3;
+       }
+    
+       .home nav ul li{
+        display: block;
+        text-align: center;
+        margin: 35px ;
+       }
+    
+       #menu{
+        display: block;
+        z-index: 4;
+       }
+    
+    
+       nav ul.is-active{
+        display: block;
+       }
+
+       .home .lang {
+        position: absolute;
+        left: 75%;
+       }
+
+    
+       .home .content{
+        display: block;
+        text-align: center;
+        padding-top: 10%;
+       }
+       .home .container-images{
+        display: none;
+       }
+    
+       .home .container-images1{
+        display: block;
+  
+    }
+    
+       .home .container-images1 .p11{
+        width: 18%;
+    }
+    
+       .home h1{
+        font-size: 2rem;
+       }
+    
+    
+       .home .container-texts h1{
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 2%;
+       }
+    
+       .home .container-texts h2{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 5%;
+       }
+
+    
+    /* ================================================== */
+    
+       .about{
+        padding: 3rem var(--padding);
+        width: 100%;
+        }
+    
+       .about .container-text {
+        width: 100%;
+       }
+    
+       .about .container-text h1 {
+        text-align: center;
+        margin-bottom: 3%;
+       }
+    
+       .about .container-text p {
+        text-align: center;
+       }
+    
+       .about .container-images{
+        display: none;
+       }
+    
+    
+    
+    /* ================================================== */
+    
+    .services{
+     padding: 3rem var(--padding);
+     width: 100%;
+    }
+    
+    .services .text-center h1 {
+    margin-bottom: 8%;
+    }
+        
+    .services .box{
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: px;
+    row-gap: 20px;
+    }
+    
+    .services .box .card{
+    width: 23%;
+    }
+        
+    .services .box .card h1{
+    font-size: 1.5rem;
+    }
+    
+    .services .box .card p{
+    font-size: 1rem;
+    }
+    
+    
+    /* ================================================== */
+    
+    .skills{
+        padding: 3rem var(--padding);
+        width: 100%;
+        display: block;
+    }
+    
+    
+    .skills .container-images{
+        display: none;
+    }
+    
+    .skills .container-skills h1{
+        display: none;
+    }
+    
+    .skills .breakline{
+        display: block;
+        text-align: center;
+        margin-bottom: 8%;
+    }
+    
+        
+    .skills .container-skills{
+        width: 100%;
+    }
+    
+    
+    .skills .container-skills .content-skills .skill{
+        margin: 2.5% 3%;
+    }
+    
+    
+     
+    /* ================================================== */
+    
+    .work{
+        padding: 3rem var(--padding);
+        width: 100%;
+    }
+    
+    .work .containercard2{
+        display: none;
+    }
+    
+    .containercard1{
+        display: block;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 10px;
+        row-gap: 15px;  
+    }
+    
+    
+    .work .containercard1 .descriptions{
+        width: 100%;
+    }
+    
+    .work .containercard1 .descriptions h1{
+        margin-top: 10%;
+    }
+    
+    
+    
+    /* ================================================== */
+    
+    .contact{
+        padding: 3rem 4rem;
+        width: 100%;
+    }
+    
+    .mail, .local, .phone{
+        margin: 10% 0;
+    }
+    
+    
+    /* ================================================== */
+    
+    
+    
+    footer{
+        padding: 3rem var(--padding);
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    footer p{
+        text-align: center;
+    }
+    
+    footer .social{
+        margin: 1.5rem 0;
+    }
+    
+    footer .mobile{
+        display: block;
+        padding: 2.5rem 0;
+    }
+    
+    footer .top{
+        bottom: 8%;
+        right: 48%;
+    }
+    
+}    
+
+
